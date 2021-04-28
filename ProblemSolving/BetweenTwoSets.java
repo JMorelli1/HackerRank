@@ -1,3 +1,5 @@
+import utils.Setup;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -30,7 +32,7 @@ public class BetweenTwoSets {
         }
     }
     public static void main(String [] args){
-        Scanner scan = new Scanner(System.in);
+        Scanner scan = Setup.getScannerInstance();
         int n = scan.nextInt();
         int m = scan.nextInt();
         List<Integer> a = new ArrayList<>();
@@ -42,5 +44,6 @@ public class BetweenTwoSets {
             b.add(scan.nextInt());
         }
         BetweenTwoSets.getTotalX(a,b);
+        Setup.closeScannerInstance();
     }
 }
