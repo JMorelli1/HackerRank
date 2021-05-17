@@ -8,7 +8,7 @@ public class BinaryGap {
         String str = Integer.toBinaryString(num);
         String [] gaps = str.replaceAll("1+|0+$", " ").split(" ");
 
-        Integer max = 0;
+        int max = 0;
         for(String gap : gaps){
             if(gap.length() > max){
                 max = gap.length();
